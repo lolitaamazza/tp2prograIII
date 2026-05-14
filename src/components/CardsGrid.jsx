@@ -1,3 +1,4 @@
+'use client' //para usar hooks
 import Card from './Card';
 
 const CardsGrid = ({ items, title }) => {

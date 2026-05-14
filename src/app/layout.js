@@ -1,5 +1,6 @@
 import './globals.css';
 import Navbar from '@/components/Navbar'; // importo el Navbar 
+import Footer from '@/components/Footer';
 
 export const metadata = {
   title: 'Mi Recetario',
@@ -11,9 +12,8 @@ export default function RootLayout({ children }) { //significa que este es el la
     <html lang="es"> 
       <body>
         <Navbar /> {/* aca se renderiza el Navbar en todas las páginas */}
-        <main>
         {children} {/* aca se renderiza el contenido de cada página */}
-      </main>
+      <Footer />
       </body>
     </html>
   );

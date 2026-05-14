@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { navAuth, navMenu } from '../lib/navItems'; //importo la lista de datos para el navbar
 
 const Navbar = () => {
@@ -6,18 +7,18 @@ const Navbar = () => {
       {/* lado izq: login y sign up */}
       <div className="nav-left">
         {navAuth.map((item, index) => (
-          <a key={index} href={item.link} className="nav-item">
+          <Link key={index} href={item.link} className="nav-item">
             {item.name}
-          </a>
+          </Link>
         ))}
       </div>
 
       {/* lado der: menú principal */}
       <div className="nav-right">
         {navMenu.map((item, index) => (
-          <a key={index} href={item.link} className="nav-item">
+          <Link key={index} href={item.link} className="nav-item">
             {item.name}
-          </a>
+          </Link>
         ))}
       </div>
     </header>
